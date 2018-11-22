@@ -1,0 +1,45 @@
+{
+  "name": "keycloak-initializer",
+  "version": "0.0.1",
+  "description": "Script to populate keycloak with initial data.",
+  "main": "app.js",
+  "scripts": {
+    "test": "yarn run eslint && NODE_ENV= yarn run mocha",
+    "eslint": "eslint app.js services/. test/. --config .eslintrc.json",
+    "dev": "nodemon src/",
+    "start": "node app.js",
+    "prettify": "find *.js -type f | xargs prettier --write",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "author": "Nóra Szepes",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "keycloak-admin": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "1.15.2"
+  }
+}
