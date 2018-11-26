@@ -4,6 +4,7 @@ This service is designed to make the configuration of a Keycloak instance easy a
 A config.json file needs to be provided and will be processed to create realms, roles, clients, groups and users.
 Payload entries can also be fetched from a different file (to keep credentials secure).
 
+A file named config.json needs to be provided.
 # Run
 
 - npm start
