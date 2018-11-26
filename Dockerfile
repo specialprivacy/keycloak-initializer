@@ -10,5 +10,5 @@ RUN npm install --only=production
 
 # Bundle app source
 COPY config.json config.json
-COPY index.js index.js
+COPY app.js app.js
 CMD [ "npm", "start" ]
