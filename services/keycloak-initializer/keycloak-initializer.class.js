@@ -47,6 +47,9 @@ class KeycloakInitializer {
   }
   async loadPayload(json, fileNameAttribute = "payload") {
     return new Promise(function(resolve, reject) {
+      if(!json) {
+        resolve();
+      }
       const filePath = json[fileNameAttribute + "File"];
       if (!filePath) {
         resolve();
