@@ -1,4 +1,4 @@
-{
+module.exports = {
   "settings": {
     "baseUrl": "http://keycloak:8080/auth",
     "auth" : {
@@ -66,5 +66,4 @@
       ]
     }
   ]
-}
-
+};

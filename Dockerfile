@@ -12,6 +12,6 @@ COPY test/ ./test/
 RUN npm install
 
 # Bundle app source
-COPY config.json config.json
+COPY config.js config.js
 COPY app.js app.js
 CMD [ "npm", "start" ]
