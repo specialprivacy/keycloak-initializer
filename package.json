@@ -4,7 +4,7 @@
   "description": "Script to populate keycloak with initial data.",
   "main": "app.js",
   "scripts": {
-    "test": "yarn run eslint && NODE_ENV= yarn run mocha --reporter mocha-teamcity-reporter test",
+    "test": "npm run eslint && NODE_ENV= npm run mocha --reporter mocha-teamcity-reporter test",
     "eslint": "./node_modules/eslint/bin/eslint.js app.js services/. test/. --config .eslintrc.json",
     "dev": "nodemon src/",
     "start": "node app.js",
