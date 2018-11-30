@@ -32,7 +32,7 @@ test:
   variables:
     GIT_STRATEGY: none
   script:
-    - npm test
+    - cd /usr/src/app && npm test
 
 release:
   stage: release
