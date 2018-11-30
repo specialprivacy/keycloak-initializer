@@ -4,12 +4,12 @@
   "description": "Script to populate keycloak with initial data.",
   "main": "app.js",
   "scripts": {
-    "test": "npm run eslint && NODE_ENV= npm run mocha --reporter mocha-teamcity-reporter test",
+    "test": "npm run eslint && NODE_ENV= npm run mocha",
     "eslint": "./node_modules/eslint/bin/eslint.js app.js services/. test/. --config .eslintrc.json",
     "dev": "nodemon src/",
     "start": "node app.js",
     "prettify": "find *.js -type f | xargs prettier --write",
-    "mocha": "mocha test/ --recursive --exit"
+    "mocha": "mocha --reporter mocha-teamcity-reporter test/ --recursive --exit"
   },
   "author": "Nóra Szepes",
   "license": "ISC",
