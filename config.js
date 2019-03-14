@@ -21,7 +21,7 @@ module.exports = {
             secret: `${process.env.KEYCLOAK_CLIENT_SECRET ||
               "special-platform-secret"}`,
             directAccessGrantsEnabled: true,
-            redirectUris: ["/callback/*", "http://localhost/callback/*", "http://localhost/*"]
+            redirectUris: ["*"]
           }
         }
       ],
