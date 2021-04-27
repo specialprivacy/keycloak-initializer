@@ -12,7 +12,8 @@ module.exports = {
     {
       payload: {
         realm: "special",
-        enabled: true
+        enabled: true,
+        sslRequired: "NONE"
       },
       clients: [
         {
